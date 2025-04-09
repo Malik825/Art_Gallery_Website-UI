@@ -335,4 +335,40 @@ main .gallery-section .grid-container2 .gallery-item:last-child p {
   }
 }
 
+.footer {
+  padding: 4rem 1rem;
+  background: hsl(0, 0%, 8%);
+}
+.footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  color: #f2f2f2;
+}
+.footer .footer-grid h2 {
+  font-weight: 700;
+  margin-top: 0.56rem;
+  margin-bottom: 1.31rem;
+  padding-right: 3rem;
+  font-size: 32px;
+  line-height: 34px;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+.footer .footer-grid .socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+@media (max-width: 62.5rem) {
+  .footer .footer-grid .socials {
+    justify-content: start;
+    margin-top: 2rem;
+  }
+}
+.footer .footer-grid .socials img {
+  width: 24px;
+  height: 16.25px;
+  object-fit: contain;
+}
+
 /*# sourceMappingURL=style.css.map */
