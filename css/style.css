@@ -253,5 +253,86 @@ main .display-large {
     display: block !important;
   }
 }
+main .gallery-section {
+  padding: 120px 0 80px;
+}
+main .gallery-section .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+main .gallery-section .grid-container .gallery-left {
+  max-width: 350px;
+}
+@media (max-width: 560px) {
+  main .gallery-section .grid-container .gallery-left {
+    order: 2;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+main .gallery-section .grid-container .gallery-left h2 {
+  font-weight: 700;
+  margin-top: 0.56rem;
+  margin-bottom: 1.31rem;
+  padding-right: 3rem;
+  font-size: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+main .gallery-section .grid-container .gallery-left p {
+  font-size: 22px;
+  line-height: 32px;
+  color: #4D4D4D;
+}
+@media (max-width: 560px) {
+  main .gallery-section .grid-container .gallery-right {
+    order: 1;
+  }
+}
+main .gallery-section .grid-container2 {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+main .gallery-section .grid-container2 img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+main .gallery-section .grid-container2 .gallery-item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+  margin: 0;
+}
+main .gallery-section .grid-container2 .gallery-item:last-child {
+  background: hsl(0, 0%, 8%);
+  color: white;
+  display: flex;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .gallery-section .grid-container2 .gallery-item:last-child h2 {
+  font-weight: 600;
+  margin-top: 0.56rem;
+  margin-bottom: 1.31rem;
+  padding-right: 3rem;
+  font-size: 38px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+main .gallery-section .grid-container2 .gallery-item:last-child p {
+  font-size: 22px;
+  line-height: 32px;
+}
+@media (max-width: 557px) {
+  main .gallery-section .grid-container2 {
+    grid-template-columns: 1fr;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

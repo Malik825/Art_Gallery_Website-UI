@@ -245,4 +245,100 @@ main{
         display: block !important;
     }
 }
+.gallery-section{
+    padding:120px 0 80px;
+    img{
+        // border-radius: .8rem;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        @media (max-width:768px) {
+            
+        }
+        //  rowga
+        .gallery-left{
+            max-width: 350px;
+            @media (max-width:560px) {
+                order: 2;
+                margin-top: 2rem;
+              margin-bottom: 2rem;  
+    
+            }
+            h2{
+                font-weight: 700;
+            margin-top: .56rem;
+            margin-bottom: 1.31rem;
+            padding-right: 3rem;
+            font-size:60px;
+            line-height: 60px;
+            text-transform: uppercase;
+                font-family: $font-family-shoulders;
+        }
+        p{
+            font-size: 22px;
+            line-height: 32px;
+            color: $color-gray;
+        }
+        }
+        .gallery-right{
+            @media (max-width:560px) {
+                order: 1;
+               
+            }
+        }
+     }  
+     .grid-container2 {
+        margin-top: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // Default to 3 columns
+        gap: 0.5rem;
+    
+        img {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    
+        .gallery-item {
+            &:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 2;
+                margin: 0;
+            }
+    
+            &:last-child {
+                // border-radius: 1rem;
+                background: $color-black;
+                color: white;
+                display: flex;
+                padding: 2rem 1rem;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+    
+                h2 {
+                    font-weight: 600;
+                    margin-top: 0.56rem;
+                    margin-bottom: 1.31rem;
+                    padding-right: 3rem;
+                    font-size: 38px;
+                    line-height: 40px;
+                    text-transform: uppercase;
+                    font-family: $font-family-shoulders;
+                }
+    
+                p {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+            }
+        }
+    
+        // Media query for screens 557px or less
+        @media (max-width: 557px) {
+            grid-template-columns: 1fr; // Change to 1 column per row
+        }
+    }
+ }
 }
