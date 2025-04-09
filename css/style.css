@@ -53,6 +53,62 @@ main .hero-section {
     height: 630px;
   }
 }
+main .hero-section .button {
+  margin-top: 2rem;
+  width: 240px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: hsl(0, 0%, 8%);
+  font-family: "Big Shoulders Display", cursive;
+  padding-left: 1.9rem;
+  text-transform: uppercase;
+  color: rgb(235, 235, 235);
+  font-weight: 560;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.4s ease-out;
+  z-index: 12;
+  padding-left: 56px;
+}
+main .hero-section .button:hover {
+  transform: translateY(20px);
+}
+main .hero-section .button:hover .arrow {
+  background-color: hsl(0, 0%, 8%);
+  transition: step-end 0.4s;
+  position: relative;
+  z-index: 10;
+}
+main .hero-section .button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: hsl(24, 56%, 63%);
+  z-index: -1;
+  transition: 0.4s ease-out;
+}
+main .hero-section .button:hover::before {
+  width: 100%;
+}
+@media (max-width: 62.5rem) {
+  main .hero-section .button {
+    margin-top: 0rem;
+  }
+}
+main .hero-section .button .arrow {
+  width: 56px;
+  background: hsl(24, 56%, 63%);
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: step-end 0.4s;
+}
 main .hero-section .grid-container {
   display: grid;
   height: 100%;
