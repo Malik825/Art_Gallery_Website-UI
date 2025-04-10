@@ -181,7 +181,6 @@ main .contact .grid-container .contact-info {
 footer {
   background: hsl(24, 56%, 63%);
   padding: 4rem 0;
-  display: none;
 }
 footer .row-container {
   display: flex;
