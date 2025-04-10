@@ -65,6 +65,19 @@ main{
             height: auto;
             object-fit: cover;
             filter: grayscale(100%);
+            @media (min-width:1140px) {
+                background: url('../assets/desktop/image-map.png') no-repeat center center / cover;
+                
+                height: 34.7rem;
+                z-index: 25;
+            }
+            @media (min-width:36rem) {
+                background: url('../assets/desktop/image-map.png') no-repeat center center / cover;
+    
+                height: 34.7rem;
+                z-index: 25;
+            }
+           
         }
         .button2 {
             position: absolute;
@@ -148,7 +161,7 @@ main{
     padding: 5.5rem 0;
     .grid-container{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
         h2{
             font-size: 78px;
             font-family: $font-family-shoulders;
