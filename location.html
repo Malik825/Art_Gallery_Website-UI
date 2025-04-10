@@ -25,15 +25,19 @@
     <main>
 
       <div class="map">
-        <div id="map-image"class="map-image">
-       
-      </div>
+        <picture class="">
+          <source media="(min-width: 1140px)" srcset="../assets/desktop/image-map.png">
+          <source media="(min-width: 36rem)" srcset="../assets/desktop/image-map.png">
+          <img src="../assets/mobile/image-map@2x.png" alt="Map Image" class="map-image" style="width: 100%; height: auto; object-fit: cover; filter: grayscale(100%);">
+      </picture>
       <a href="./index.html"  class="button2">
         <span class="arrow"
           ><img src="./assets/icon-arrow-right.svg" alt=""
         /></span>
         <span class="button-text"> Go Back Home </span>
-      </button>
+      </a>
+      </div>
+      
     </div>
     <section class="contact">
       <div class="container">
