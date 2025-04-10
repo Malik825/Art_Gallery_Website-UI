@@ -330,7 +330,7 @@ main{
         order: 3;
     }
 }
-<<<<<<< HEAD
+
 .hide-specify{
     display: none;
     @media (max-width:732px) {
@@ -351,9 +351,7 @@ main{
 }
 .gallery-section{
     padding:120px 0 80px;
-    img{
-        // border-radius: .8rem;
-    }
+  
     .grid-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -484,7 +482,4 @@ main{
       }
     }
   }
-=======
 
-}
->>>>>>> hero-section
