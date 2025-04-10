@@ -357,6 +357,7 @@ main{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         @media (max-width:768px) {
             
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
         //  rowga
         .gallery-left{
@@ -393,7 +394,7 @@ main{
      .grid-container2 {
         margin-top: 0.5rem;
         display: grid;
-        grid-template-columns: repeat(3, 1fr); // Default to 3 columns
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 0.5rem;
     
         img {
@@ -410,7 +411,7 @@ main{
             }
     
             &:last-child {
-                // border-radius: 1rem;
+              
                 background: $color-black;
                 color: white;
                 display: flex;
@@ -439,7 +440,8 @@ main{
     
         // Media query for screens 557px or less
         @media (max-width: 557px) {
-            grid-template-columns: 1fr; // Change to 1 column per row
+            display: flex;
+            flex-direction: column;
         }
     }
  }
