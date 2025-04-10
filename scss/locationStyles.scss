@@ -56,3 +56,216 @@ img {
         max-width: 90%;
     }
 }
+main{
+    .map{
+        width:100%;
+        position: relative;
+        .map-image{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: grayscale(100%);
+            @media (min-width:1140px) {
+                background: url('../assets/desktop/image-map.png') no-repeat center center / cover;
+                
+                height: 34.7rem;
+                z-index: 25;
+            }
+            @media (min-width:36rem) {
+                background: url('../assets/desktop/image-map.png') no-repeat center center / cover;
+    
+                height: 34.7rem;
+                z-index: 25;
+            }
+           
+        }
+        .button2 {
+            position: absolute;
+            left: 11%;
+            top: 0;
+            
+            width: 240px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: $color-black;
+            font-family: $font-family-shoulders;
+            text-transform: uppercase;
+            color: $color-white;
+            font-weight: 560;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            transition: .4s ease-out;
+            z-index: 12;  
+            @media (max-width:557px) {
+                left: 0;
+            }
+            .arrow {
+                width: 56px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $color-gold;
+                z-index: 10;  
+                position: relative;
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+        
+            .button-text {
+                flex: 1;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 32;  
+                font-weight: bold;
+                &::before {
+                    content: ''; 
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 0;
+                    height: 100%;
+                    cursor: pointer;  // Ensures the area is clickable
+                    background: transparent;  // Ensure background is transparent initially
+                    transition: width 0.4s ease; // Add transition for smooth effect
+                    z-index: -1;  // Keep it below the text but above the arrow
+                }
+        
+               
+            }
+            &:hover {
+                .button-text {
+                    &::before{
+    
+                        width: 100%;
+                        background: $color-gold;
+                    }
+                }
+                .arrow{
+                    background-color: $color-black;
+                    transition: step-end .4s;
+                    position: relative;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+    .contact{
+        background:$color-black;
+    padding: 5.5rem 0;
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+        @media(max-width:600px){
+            row-gap: 4rem;
+        }
+        h2{
+            font-size: 78px;
+            font-family: $font-family-shoulders;
+            color: $color-white;
+            line-height: 75px;
+            text-transform: uppercase;
+           
+        }
+        h3{
+            text-transform: uppercase;
+            font-size: $font-size-600;
+            color: $color-gold;
+            line-height: clamp(36px, 36px, 32px);
+            font-family: $font-family-shoulders;
+            margin-bottom: 1.4rem;
+        }
+        p{
+            font-size: 16px;
+            color: $color-white;
+            line-height: 28px;
+            max-width: 320px;
+        }
+        .contact-text{
+            margin-top: 1.4rem;
+            font-size: 20px;
+        }
+        .contact-info{
+            padding: 0rem 0 0 4rem;
+            @media (max-width:900px) {
+                padding-left: 0rem;
+            }
+        }
+    }
+}
+}
+footer{
+    background:$color-gold;
+    padding:4rem 0;
+    .row-container{
+        display:flex;
+
+        flex-wrap: wrap;
+
+        .flex-33{
+            flex: 0 0 25%;
+            @media(max-width:768px){
+                flex:0 0 100%;
+                padding: 0 0 !important;
+            }
+        }
+        .flex-50{
+            flex: 0 0 50%;
+            
+            @media(max-width:768px){
+                flex:0 0 100%;
+            }
+        }
+
+        h3{
+            font-size:$font-size-600;
+            text-transform: uppercase;
+            color: $color-black;
+            line-height: 36px;
+            font-family: $font-family-shoulders;
+
+        }
+        p{
+            color: $color-black;
+            font-size: 18px;
+            justify-content: center;
+            width: 100%;
+            // padding: 0 8%;
+            @media(max-width:768px){
+                flex:0 0 100%;
+                padding: 0 0 !important;
+                margin:1.8em 0;
+            }
+        }
+        .socials{
+            display:flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            position: relative;
+            
+            @media(max-width:768px){
+                flex:0 0 100%;
+                justify-content: start;
+                gap: 1rem;
+            }
+            li{
+                img{
+                    filter: invert(1);
+
+                }
+                &:hover{
+                    img{
+                        filter:invert(0)
+                    }
+                }
+            }
+        }
+    }
+    
+}

@@ -41,4 +41,209 @@ img {
   }
 }
 
+main .map {
+  width: 100%;
+  position: relative;
+}
+main .map .map-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+@media (min-width: 1140px) {
+  main .map .map-image {
+    background: url("../assets/desktop/image-map.png") no-repeat center center/cover;
+    height: 34.7rem;
+    z-index: 25;
+  }
+}
+@media (min-width: 36rem) {
+  main .map .map-image {
+    background: url("../assets/desktop/image-map.png") no-repeat center center/cover;
+    height: 34.7rem;
+    z-index: 25;
+  }
+}
+main .map .button2 {
+  position: absolute;
+  left: 11%;
+  top: 0;
+  width: 240px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: hsl(0, 0%, 8%);
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  color: rgb(235, 235, 235);
+  font-weight: 560;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  transition: 0.4s ease-out;
+  z-index: 12;
+}
+@media (max-width: 557px) {
+  main .map .button2 {
+    left: 0;
+  }
+}
+main .map .button2 .arrow {
+  width: 56px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(24, 56%, 63%);
+  z-index: 10;
+  position: relative;
+}
+main .map .button2 .arrow img {
+  transform: rotate(180deg);
+}
+main .map .button2 .button-text {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 32;
+  font-weight: bold;
+}
+main .map .button2 .button-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  cursor: pointer;
+  background: transparent;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+main .map .button2:hover .button-text::before {
+  width: 100%;
+  background: hsl(24, 56%, 63%);
+}
+main .map .button2:hover .arrow {
+  background-color: hsl(0, 0%, 8%);
+  transition: step-end 0.4s;
+  position: relative;
+  z-index: 10;
+}
+main .contact {
+  background: hsl(0, 0%, 8%);
+  padding: 5.5rem 0;
+}
+main .contact .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+}
+@media (max-width: 600px) {
+  main .contact .grid-container {
+    row-gap: 4rem;
+  }
+}
+main .contact .grid-container h2 {
+  font-size: 78px;
+  font-family: "Big Shoulders Display", cursive;
+  color: rgb(235, 235, 235);
+  line-height: 75px;
+  text-transform: uppercase;
+}
+main .contact .grid-container h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: hsl(24, 56%, 63%);
+  line-height: 36px;
+  font-family: "Big Shoulders Display", cursive;
+  margin-bottom: 1.4rem;
+}
+main .contact .grid-container p {
+  font-size: 16px;
+  color: rgb(235, 235, 235);
+  line-height: 28px;
+  max-width: 320px;
+}
+main .contact .grid-container .contact-text {
+  margin-top: 1.4rem;
+  font-size: 20px;
+}
+main .contact .grid-container .contact-info {
+  padding: 0rem 0 0 4rem;
+}
+@media (max-width: 900px) {
+  main .contact .grid-container .contact-info {
+    padding-left: 0rem;
+  }
+}
+
+footer {
+  background: hsl(24, 56%, 63%);
+  padding: 4rem 0;
+}
+footer .row-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .row-container .flex-33 {
+  flex: 0 0 25%;
+}
+@media (max-width: 768px) {
+  footer .row-container .flex-33 {
+    flex: 0 0 100%;
+    padding: 0 0 !important;
+  }
+}
+footer .row-container .flex-50 {
+  flex: 0 0 50%;
+}
+@media (max-width: 768px) {
+  footer .row-container .flex-50 {
+    flex: 0 0 100%;
+  }
+}
+footer .row-container h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 8%);
+  line-height: 36px;
+  font-family: "Big Shoulders Display", cursive;
+}
+footer .row-container p {
+  color: hsl(0, 0%, 8%);
+  font-size: 18px;
+  justify-content: center;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  footer .row-container p {
+    flex: 0 0 100%;
+    padding: 0 0 !important;
+    margin: 1.8em 0;
+  }
+}
+footer .row-container .socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  position: relative;
+}
+@media (max-width: 768px) {
+  footer .row-container .socials {
+    flex: 0 0 100%;
+    justify-content: start;
+    gap: 1rem;
+  }
+}
+footer .row-container .socials li img {
+  filter: invert(1);
+}
+footer .row-container .socials li:hover img {
+  filter: invert(0);
+}
+
 /*# sourceMappingURL=locationStyles.css.map */
