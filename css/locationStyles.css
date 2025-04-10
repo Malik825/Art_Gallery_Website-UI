@@ -142,6 +142,11 @@ main .contact .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
 }
+@media (max-width: 600px) {
+  main .contact .grid-container {
+    row-gap: 4rem;
+  }
+}
 main .contact .grid-container h2 {
   font-size: 78px;
   font-family: "Big Shoulders Display", cursive;

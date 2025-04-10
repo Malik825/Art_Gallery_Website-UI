@@ -162,6 +162,9 @@ main{
     .grid-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+        @media(max-width:600px){
+            row-gap: 4rem;
+        }
         h2{
             font-size: 78px;
             font-family: $font-family-shoulders;
