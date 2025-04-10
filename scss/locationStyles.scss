@@ -202,13 +202,22 @@ footer{
     padding:4rem 0;
     .row-container{
         display:flex;
-        // flex-wrap: wrap;
+
+        flex-wrap: wrap;
 
         .flex-33{
             flex: 0 0 25%;
+            @media(max-width:768px){
+                flex:0 0 100%;
+                padding: 0 0 !important;
+            }
         }
         .flex-50{
             flex: 0 0 50%;
+            
+            @media(max-width:768px){
+                flex:0 0 100%;
+            }
         }
 
         h3{
@@ -224,13 +233,24 @@ footer{
             font-size: 18px;
             justify-content: center;
             width: 100%;
-            padding: 0 8%;
+            // padding: 0 8%;
+            @media(max-width:768px){
+                flex:0 0 100%;
+                padding: 0 0 !important;
+                margin:1.8em 0;
+            }
         }
         .socials{
             display:flex;
             justify-content: flex-end;
             gap: 1rem;
             position: relative;
+            
+            @media(max-width:768px){
+                flex:0 0 100%;
+                justify-content: start;
+                gap: 1rem;
+            }
             li{
                 img{
                     filter: invert(1);
