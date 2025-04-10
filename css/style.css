@@ -365,6 +365,19 @@ main .gallery-section .grid-container2 .gallery-item:last-child p {
     margin-top: 2rem;
   }
 }
+.footer .footer-grid .socials li {
+  width: 30px;
+  height: 30px;
+  background: fff;
+  transition: 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer-grid .socials li:hover {
+  background: hsl(24, 56%, 63%);
+  cursor: pointer;
+}
 .footer .footer-grid .socials img {
   width: 24px;
   height: 16.25px;
