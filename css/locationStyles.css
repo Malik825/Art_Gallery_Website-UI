@@ -177,5 +177,44 @@ main .contact .grid-container .contact-info {
     padding-left: 0rem;
   }
 }
+main footer {
+  background: hsl(24, 56%, 63%);
+  padding: 4rem 0;
+}
+main footer .row-container {
+  display: flex;
+}
+main footer .row-container .flex-33 {
+  flex: 0 0 25%;
+}
+main footer .row-container .flex-50 {
+  flex: 0 0 50%;
+}
+main footer .row-container h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 8%);
+  line-height: 36px;
+  font-family: "Big Shoulders Display", cursive;
+}
+main footer .row-container p {
+  color: hsl(0, 0%, 8%);
+  font-size: 18px;
+  justify-content: center;
+  width: 100%;
+  padding: 0 8%;
+}
+main footer .row-container .socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  position: relative;
+}
+main footer .row-container .socials li img {
+  filter: invert(1);
+}
+main footer .row-container .socials li:hover img {
+  filter: invert(0);
+}
 
 /*# sourceMappingURL=locationStyles.css.map */
