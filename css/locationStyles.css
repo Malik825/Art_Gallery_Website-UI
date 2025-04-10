@@ -177,43 +177,45 @@ main .contact .grid-container .contact-info {
     padding-left: 0rem;
   }
 }
-main footer {
+
+footer {
   background: hsl(24, 56%, 63%);
   padding: 4rem 0;
+  display: none;
 }
-main footer .row-container {
+footer .row-container {
   display: flex;
 }
-main footer .row-container .flex-33 {
+footer .row-container .flex-33 {
   flex: 0 0 25%;
 }
-main footer .row-container .flex-50 {
+footer .row-container .flex-50 {
   flex: 0 0 50%;
 }
-main footer .row-container h3 {
+footer .row-container h3 {
   font-size: 2rem;
   text-transform: uppercase;
   color: hsl(0, 0%, 8%);
   line-height: 36px;
   font-family: "Big Shoulders Display", cursive;
 }
-main footer .row-container p {
+footer .row-container p {
   color: hsl(0, 0%, 8%);
   font-size: 18px;
   justify-content: center;
   width: 100%;
   padding: 0 8%;
 }
-main footer .row-container .socials {
+footer .row-container .socials {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
   position: relative;
 }
-main footer .row-container .socials li img {
+footer .row-container .socials li img {
   filter: invert(1);
 }
-main footer .row-container .socials li:hover img {
+footer .row-container .socials li:hover img {
   filter: invert(0);
 }
 
