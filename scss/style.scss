@@ -473,7 +473,19 @@ main{
           justify-content: start;
           margin-top: 2rem;
         }
-  
+        li{
+            width:30px;
+            height:30px;
+            background:fff;
+            transition: .4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background:$color-gold;
+                cursor:pointer;
+            }
+        }
         img {
           width: 24px;
           height: 16.25px;
