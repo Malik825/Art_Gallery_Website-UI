@@ -260,6 +260,11 @@ main .gallery-section .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+@media (max-width: 768px) {
+  main .gallery-section .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
 main .gallery-section .grid-container .gallery-left {
   max-width: 350px;
 }
@@ -293,7 +298,7 @@ main .gallery-section .grid-container .gallery-left p {
 main .gallery-section .grid-container2 {
   margin-top: 0.5rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 0.5rem;
 }
 main .gallery-section .grid-container2 img {
@@ -331,7 +336,8 @@ main .gallery-section .grid-container2 .gallery-item:last-child p {
 }
 @media (max-width: 557px) {
   main .gallery-section .grid-container2 {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 }
 
