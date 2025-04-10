@@ -158,4 +158,44 @@ main{
             }
         }
     }
+    .contact{
+        background:$color-black;
+    padding: 5.5rem 0;
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        h2{
+            font-size: 78px;
+            font-family: $font-family-shoulders;
+            color: $color-white;
+            line-height: 75px;
+            text-transform: uppercase;
+           
+        }
+        h3{
+            text-transform: uppercase;
+            font-size: $font-size-600;
+            color: $color-gold;
+            line-height: clamp(36px, 36px, 32px);
+            font-family: $font-family-shoulders;
+            margin-bottom: 1.4rem;
+        }
+        p{
+            font-size: 16px;
+            color: $color-white;
+            line-height: 28px;
+            max-width: 320px;
+        }
+        .contact-text{
+            margin-top: 1.4rem;
+            font-size: 20px;
+        }
+        .contact-info{
+            padding: 0rem 0 0 4rem;
+            @media (max-width:900px) {
+                padding-left: 0rem;
+            }
+        }
+    }
+}
 }

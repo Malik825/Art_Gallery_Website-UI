@@ -136,5 +136,46 @@ main .map .button2:hover .arrow {
   position: relative;
   z-index: 10;
 }
+main .contact {
+  background: hsl(0, 0%, 8%);
+  padding: 5.5rem 0;
+}
+main .contact .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+main .contact .grid-container h2 {
+  font-size: 78px;
+  font-family: "Big Shoulders Display", cursive;
+  color: rgb(235, 235, 235);
+  line-height: 75px;
+  text-transform: uppercase;
+}
+main .contact .grid-container h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: hsl(24, 56%, 63%);
+  line-height: 36px;
+  font-family: "Big Shoulders Display", cursive;
+  margin-bottom: 1.4rem;
+}
+main .contact .grid-container p {
+  font-size: 16px;
+  color: rgb(235, 235, 235);
+  line-height: 28px;
+  max-width: 320px;
+}
+main .contact .grid-container .contact-text {
+  margin-top: 1.4rem;
+  font-size: 20px;
+}
+main .contact .grid-container .contact-info {
+  padding: 0rem 0 0 4rem;
+}
+@media (max-width: 900px) {
+  main .contact .grid-container .contact-info {
+    padding-left: 0rem;
+  }
+}
 
 /*# sourceMappingURL=locationStyles.css.map */
