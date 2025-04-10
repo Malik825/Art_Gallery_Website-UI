@@ -7,16 +7,22 @@
     border: none;
     list-style: none;
 }
-
-$body: #f2f2f2;
-$color-gold: hsl(24, 56%, 63%);
-$color-black: hsl(0, 0%, 8%);
-$color-gray: #4D4D4D;
-$color-white: rgb(235 235 235);
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style: none;
+}
+$color-gold: hsl( 24 56% 63% ); 
+$color-black: #1a1a1a; 
+$color-gray: #444; 
+$color-white: #ffffff; 
 $font-size-900: 3.75rem;
 $font-size-800: 3.125rem;
-$font-size-560: 3.125rem;
+$font-size-700: 3.125rem;
 $font-size-600: 2rem;
 $font-size-500: 1.125rem;
 $font-size-400: 1rem;
@@ -24,11 +30,28 @@ $font-size-400: 1rem;
 $font-family-shoulders: "Big Shoulders Display", cursive;
 $font-family-outfit: "Outfit", sans-serif;
 
+@media (min-width: 35rem) {
+    $font-size-900: 4.375rem;
+    $font-size-800: 3.4375rem;
+    $font-size-700: 3.125rem;
+    $font-size-600: 2rem;
+    $font-size-500: 1.125rem;
+    $font-size-400: 1rem;
+}
+
+@media (min-width: 1100px) {
+    $font-size-900: 6rem;
+    $font-size-800: 4.375rem;
+    $font-size-700: 3.75rem;
+    $font-size-600: 2.25rem;
+    $font-size-500: 1.375rem;
+    $font-size-400: 1.125rem;
+}
 html,
 body {
     scroll-behavior: smooth;
     font-family: $font-family-outfit;
-    color: $color-black;
+    color: #333;
     overflow-x: hidden;
 }
 
@@ -59,7 +82,6 @@ img {
 main{
     padding:0px !important;
 .hero-section {
-    height:728px;
     position: relative;
     @media (max-width:62.5rem) {
         height: 630px;
@@ -136,7 +158,6 @@ main{
         .hero-left, .hero-right {
             margin-top: -12rem;
             padding: 0 4rem;
-
             display: flex;
             align-items: center;
 
@@ -145,11 +166,18 @@ main{
                 margin: 0 !important;
             }
         }
-
+        .hero-hide{
+            display: none;
+            @media(max-width:62.5rem){
+                display: block;
+            }
+            h1{
+                position: relative !important;
+            }
+        }
         .hero-left {
            
             background: $color-black;
-        
             @media (max-width: 62.5rem) {
                 position: absolute;
                 top: 50%;
@@ -157,6 +185,7 @@ main{
                 z-index: 2;
                 transform: translate(-50%, -50%);
                 background: transparent;
+                display: none;
             }
             @media (max-width: 732px) {
                 left: 74%;
@@ -169,9 +198,9 @@ main{
             }
         
             h1 {
-                margin-left: 35.6%;
+                position: absolute;
+                left: 8%;
                 font-weight: 900;
-                min-width: 303px;
                 z-index: 1;
                 color: rgb(235, 235, 235);
                 mix-blend-mode: difference;
@@ -179,13 +208,9 @@ main{
                 line-height: 88px;
                 text-transform: uppercase;
                 font-family: $font-family-shoulders;
-        
                 @media (max-width: 62.5rem) {
-                    font-size: 60px;
-                    line-height: 55px;
-                    color: $color-black;
-                    margin-left: 0%;
-                    mix-blend-mode: normal;
+                 
+                    display: none;
                 }
         
                 @media (max-width: 770px) {
@@ -195,7 +220,7 @@ main{
             }
         }
         .hero-image {
-           
+           height: fit-content;
             @media (max-width: 62.5rem) {
                 position: absolute;
                 left: 0;
@@ -220,16 +245,13 @@ main{
                 z-index: 2;
                 transform: translate(-50%, -50%);
             }
-            @media (max-width: 732px) {
-                left: 93%;
-                top: 78%;
-            }
-            @media (max-width: 668px) {
+            @media (max-width: 687px) {
+                position: absolute;
                 left: 95%;
+                z-index: 2;
+                transform: translate(-50%, -50%);
             }
-            @media (max-width: 610px) {
-                left: 96.5%;
-            }
+            
             @media (max-width: 560px) {
                 position: relative !important;
                 left: 0% !important;
@@ -243,7 +265,30 @@ main{
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-              
+                h1{
+                    display: none;
+                    @media (max-width:62.5rem) {
+                        display: block !important;
+                        
+                font-weight: 900;
+                // min-width: 303px;
+                z-index: 1;
+            
+                line-height: 62px;
+                color: $color-black;
+                margin-left: 0%;
+                mix-blend-mode: normal;
+                text-transform: uppercase;
+                font-family: $font-family-shoulders;
+                text-shadow: 0.5px 0.5px 0 rgba(0,0,0, .5), 
+                -0.5px -0.5px 0 rgba(0,0,0, .5),  
+                0.5px -0.5px 0 rgba(0,0,0, .5),  
+                -0.5px 1px 0 rgba(0,0,0, .5);
+
+                // -webkit-text-stroke: 1px #000; /* Adjust the thickness and color */
+                // color: white;
+                    }
+                }
                 @media (max-width: 560px) {
                     margin-left: 0%;
                 }
@@ -253,9 +298,10 @@ main{
                     line-height: 32px;
                     color: $color-gray;
                     font-weight: 200;
-                    max-width: 240px;
+                    max-width: 350px;
                     @media (max-width: 62.5rem) {
-                        max-width: 350px;
+                        max-width: 400px;
+                       
                     }
                     @media (max-width: 800px) {
                         max-width: 240px;
@@ -284,6 +330,7 @@ main{
         order: 3;
     }
 }
+<<<<<<< HEAD
 .hide-specify{
     display: none;
     @media (max-width:732px) {
@@ -437,3 +484,7 @@ main{
       }
     }
   }
+=======
+
+}
+>>>>>>> hero-section
